@@ -1,0 +1,9 @@
+body { margin:0; padding:0; }
+#directionsMap { position:absolute; top:0; bottom:0; width:100%; }
+
+.socialMediaContainer {
+  margin-left: 20%;
+  margin-top: 20%;
+}
+
+
