@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngCordova'])
 
 .controller('DirectionsCtrl', function($scope, data) {
   $scope.data = data;
@@ -25,8 +25,16 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('SettingsCtrl', function($scope, data) {
+.controller('SettingsCtrl', function($scope, data, $cordovaToast) {
   $scope.data = data;
+
+  //indicate settings is saved when the view is about to leave and no longer be the active view.
+  $scope.$on('$ionicView.beforeLeave', function () {
+    // please wrap each cordova plugin with deviceready function
+    $ionicPlatform.ready(function() {
+      $cordovaToast.showShortBottom("hi");
+    });
+  });
 
   // would probably not need this
   $scope.updateSettings = function() {
