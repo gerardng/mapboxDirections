@@ -11,7 +11,6 @@
         <option value="bright">Bright</option>
         <option value="dark">Dark</option>
         <option value="satellite">Satellite</option>
-
       </select>
     </label>
 
@@ -26,27 +25,27 @@
       </select>
     </label>
 
-    <ul class="list">
 
-      <li class="item item-toggle">
-        HTML5
-        <label class="toggle toggle-assertive">
-          <input type="checkbox">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </li>
+    <label class="item item-toggle">
+      Scroll Zoom
+      <label class="toggle toggle-assertive">
+        <input ng-model="data.scrollZoom" ng-change="updateSettings()" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </label>
 
 
-    </ul>
 
-    Zoom - Level
-    <div class="item range range-positive">
-      <i class="icon ion-ios-sunny-outline"></i>
-      <input type="range" name="zoom" min="0" max="30" value="14">
-      <i class="icon ion-ios-sunny"></i>
-    </div>
+      <div class = "input-label">
+        Zoom
+      </div>
+        <div class="item range range-positive">
+          <i class="icon ion-android-radio-button-off"></i>
+          <input ng-model="data.zoomLevel" ng-change="updateSettings()" type="range" name="zoom" min="0" max="30" value="14">
+          <i class="icon ion-android-radio-button-on"></i>
+        </div>
 
   </ion-content>
 </ion-view>
