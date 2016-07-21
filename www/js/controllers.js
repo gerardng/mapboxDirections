@@ -3,7 +3,6 @@ angular.module('starter.controllers', [])
 .controller('DirectionsCtrl', function($scope, data) {
   $scope.data = data;
 
-
   //initialize map
   mapboxgl.accessToken = 'pk.eyJ1IjoiZ2VyYXJkbmciLCJhIjoiY2lxbjJjN20xMDB2MmZrbmhiaGIzNWVtYSJ9.p6btnHa0blwAknK5ygbqeg';
   var map = new mapboxgl.Map({
@@ -13,10 +12,11 @@ angular.module('starter.controllers', [])
     zoom: 14
   });
 
+  //initialize map settings each time directions.html comes into active view
   $scope.$on('$ionicView.enter', function () {
+    alert("Initializing " + $scope.data.selectedMapType + " styled map");
     map.setStyle('mapbox://styles/mapbox/' + $scope.data.selectedMapType + '-v9');
     map.setLayoutProperty('country-label-lg', 'text-field', '{' + $scope.data.selectedMapType + '}');
-
     });
 
 
@@ -28,29 +28,16 @@ angular.module('starter.controllers', [])
 .controller('SettingsCtrl', function($scope, data) {
   $scope.data = data;
 
+  // would probably not need this
   $scope.updateSettings = function() {
     //alert($scope.data.selectedMapType);
   };
 })
 
+// loading 2 maps is resource costly and lags the app
 .controller('ExploreCtrl', function($scope, data) {
   $scope.data = data;
 
-  //initialize map
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZ2VyYXJkbmciLCJhIjoiY2lxbjJjN20xMDB2MmZrbmhiaGIzNWVtYSJ9.p6btnHa0blwAknK5ygbqeg';
-  var map = new mapboxgl.Map({
-    container: 'directionsMap',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [-123.1, 49.1],
-    zoom: 14
-  });
-
-  $scope.$on('$ionicView.enter', function () {
-    map.setStyle('mapbox://styles/mapbox/' + $scope.data.selectedMapType + '-v9');
-    map.setLayoutProperty('country-label-lg', 'text-field', '{' + $scope.data.selectedMapType + '}');
-  });
-
-  map.addControl(new mapboxgl.Geocoder());
 
 })
 
