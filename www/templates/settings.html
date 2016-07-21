@@ -27,7 +27,7 @@
 
 
     <label class="item item-toggle">
-      Scroll Zoom
+      Disable Scroll Zoom
       <label class="toggle toggle-assertive">
         <input ng-model="data.scrollZoom" ng-change="updateSettings()" type="checkbox">
         <div class="track">
@@ -36,10 +36,28 @@
       </label>
     </label>
 
+    <label class="item item-toggle">
+      Disable Drag Pan
+      <label class="toggle toggle-assertive">
+        <input ng-model="data.dragPan" ng-change="updateSettings()" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </label>
 
+    <label class="item item-toggle">
+      Disable Double-click to zoom
+      <label class="toggle toggle-assertive">
+        <input ng-model="data.doubleClick" ng-change="updateSettings()" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </label>
 
       <div class = "input-label">
-        Zoom
+        Initial zoom
       </div>
         <div class="item range range-positive">
           <i class="icon ion-android-radio-button-off"></i>
