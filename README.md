@@ -11,7 +11,7 @@ Make sure the `ionic` utility is installed:
 $ npm install -g ionic
 ```
 
-Install the ngCordova plugin:
+Install the `ngCordova` plugin:
 
 ```bash
 $ bower install ngCordova
