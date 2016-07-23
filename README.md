@@ -17,6 +17,15 @@ Install the ngCordova plugin:
 $ bower install ngCordova
 ```
 
+Add platforms (ios and android):
+
+```bash
+$ ionic platform add ios
+```
+
+```bash
+$ ionic platform add android
+```
 
 Then run (ios and android): 
 
