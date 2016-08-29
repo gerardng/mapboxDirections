@@ -5,7 +5,7 @@
       <div class = "input-label">
         Map Type
       </div>
-      <select ng-model="data.selectedMapType" ng-change="updateSettings()">
+      <select ng-model="data.selectedMapType">
         <option value="basic" ng-selected="true">Basic</option>
         <option value="streets">Streets</option>
         <option value="bright">Bright</option>
@@ -18,7 +18,7 @@
       <div class = "input-label">
         Map Language
       </div>
-      <select ng-model="data.selectedMapLanguage" ng-change="updateSettings()">
+      <select ng-model="data.selectedMapLanguage">
         <option value="name_en" ng-selected="true">English</option>
         <option value="name_es">Spanish</option>
         <option value="name_ru">Russian</option>
@@ -28,7 +28,7 @@
 
     <label class="item item-toggle">
       Disable Scroll Zoom
-      <label class="toggle toggle-assertive">
+      <label class="toggle toggle-royal">
         <input ng-model="data.scrollZoom" ng-change="updateSettings()" type="checkbox">
         <div class="track">
           <div class="handle"></div>
@@ -48,22 +48,13 @@
 
     <label class="item item-toggle">
       Disable Double-click to zoom
-      <label class="toggle toggle-assertive">
+      <label class="toggle toggle-calm">
         <input ng-model="data.doubleClick" ng-change="updateSettings()" type="checkbox">
         <div class="track">
           <div class="handle"></div>
         </div>
       </label>
     </label>
-
-      <div class = "input-label">
-        Initial zoom
-      </div>
-        <div class="item range range-positive">
-          <i class="icon ion-android-radio-button-off"></i>
-          <input ng-model="data.zoomLevel" ng-change="updateSettings()" type="range" name="zoom" min="0" max="30" value="14">
-          <i class="icon ion-android-radio-button-on"></i>
-        </div>
 
   </ion-content>
 </ion-view>

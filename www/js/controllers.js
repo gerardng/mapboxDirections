@@ -9,7 +9,7 @@ angular.module('starter.controllers', ['ngCordova'])
     container: 'directionsMap',
     style: 'mapbox://styles/mapbox/streets-v9',
     center: [-123.1, 49.1],
-    zoom: 14
+    zoom: $scope.data.selectedZoom
   });
 
   //initialize map settings each time directions.html comes into active view
@@ -17,7 +17,22 @@ angular.module('starter.controllers', ['ngCordova'])
     alert("Initializing " + $scope.data.selectedMapType + " styled map");
     map.setStyle('mapbox://styles/mapbox/' + $scope.data.selectedMapType + '-v9');
     map.setLayoutProperty('country-label-lg', 'text-field', '{' + $scope.data.selectedMapType + '}');
-    });
+    if ($scope.data.disablesScrollZoom) {
+      map[scrollZoom].disable();
+    } else {
+      map[scrollZoom].enable();
+    }
+    if ($scope.data.disableDragPan) {
+      map[dragPan].disable();
+    } else {
+      map[dragPan].enable();
+    }
+    if ($scope.data.disableDoubleClickZoom) {
+      map[doubleClickZoom].disable();
+    } else {
+      map[doubleClickZoom].enable();
+    }
+  });
 
 
   // directions control
@@ -28,18 +43,24 @@ angular.module('starter.controllers', ['ngCordova'])
 .controller('SettingsCtrl', function($scope, data, $cordovaToast) {
   $scope.data = data;
 
+
   //indicate settings is saved when the view is about to leave and no longer be the active view.
   $scope.$on('$ionicView.beforeLeave', function () {
     // please wrap each cordova plugin with deviceready function
     $ionicPlatform.ready(function() {
-      $cordovaToast.showShortBottom("hi");
+      $cordovaToast.showShortBottom("Leaving view");
     });
   });
 
-  // would probably not need this
+  // Update mostly true/false boolean options
   $scope.updateSettings = function() {
-    //alert($scope.data.selectedMapType);
-  };
+    if (!$scope.value) {
+      $scope.value = true;
+    } else {
+      $scope.value = false;
+    }
+  }
+
 })
 
 // loading 2 maps is resource costly and lags the app
@@ -53,7 +74,11 @@ angular.module('starter.controllers', ['ngCordova'])
 .factory('data',function() {
   return {
     selectedMapType: 'basic',
-    selectedMapLanguage: 'name_en'
+    selectedMapLanguage: 'name_en',
+    selectedZoom: '14',
+    disablesScrollZoom: 'false',
+    disableDragPan: 'false',
+    disableDoubleClickZoom: 'false'
   };
 })
 
@@ -126,3 +151,4 @@ angular.module('starter.controllers', ['ngCordova'])
 
 
 ; // end of line
+
