@@ -1,7 +1,9 @@
-MapBox Directions
+MapBox Directions ![alt tag](https://github.com/gerardng/mapboxDirections/blob/master/logo.png)
 =====================
 
 An app created using the Ionic Framework and AngularJS and the MapBox GL API.
+
+![alt tag](https://github.com/gerardng/mapboxDirections/blob/master/google-store-btn.png)[Click here](https://play.google.com/store/apps/details?id=com.gerardngjr.mapboxdirections)
 
 ## Screens
 ![alt tag](https://github.com/gerardng/mapboxDirections/blob/master/directions.png)
