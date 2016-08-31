@@ -4,6 +4,7 @@
     <list default="true" id="dbbe1339-0e01-4bf5-8c28-faaae3707737" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="MapBoxDirections.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -326,15 +327,15 @@
       <workItem from="1469660730296" duration="1532000" />
       <workItem from="1470272912057" duration="682000" />
       <workItem from="1472503983165" duration="4156000" />
-      <workItem from="1472686868420" duration="21000" />
+      <workItem from="1472686868420" duration="111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40023000" />
+    <option name="totallyTimeSpent" value="40113000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="106" y="23" width="1260" height="680" extended-state="1" />
+    <frame x="106" y="23" width="1260" height="680" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
