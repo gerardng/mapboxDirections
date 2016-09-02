@@ -3,12 +3,13 @@ MapBox Directions ![alt tag](https://github.com/gerardng/mapboxDirections/blob/m
 
 An app created using the Ionic Framework and AngularJS and the MapBox GL API.
 
-![alt tag](https://github.com/gerardng/mapboxDirections/blob/master/google-store-btn.png)[Click here](https://play.google.com/store/apps/details?id=com.gerardngjr.mapboxdirections)
+<a href="https://play.google.com/store/apps/details?id=com.gerardngjr.mapboxdirections" target="_blank" rel="noopener"><img src="https://github.com/gerardng/mapboxDirections/blob/master/google-store-btn.png"/></a>
 
-## Screens
-![alt tag](https://github.com/gerardng/mapboxDirections/blob/master/directions.png)
-![alt tag](https://github.com/gerardng/mapboxDirections/blob/master/directions2.png)
-![alt tag](https://github.com/gerardng/mapboxDirections/blob/master/settings.png)
+## Screenshots
+<img src="https://github.com/gerardng/mortgageCalculator/blob/master/directions.png" width="250px" height="435px"/>
+<img src="https://github.com/gerardng/mortgageCalculator/blob/master/directions2.png" width="250px" height="435px"/>
+<img src="https://github.com/gerardng/mortgageCalculator/blob/master/settings.png" width="250px" height="435px"/>
+
 
 ## Using this project
 
