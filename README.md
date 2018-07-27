@@ -2,6 +2,7 @@ MapBox Directions ![alt tag](https://github.com/gerardng/mapboxDirections/blob/m
 =====================
 
 An app created using the Ionic Framework and AngularJS and the MapBox GL API.
+
 UPDATE 2018-07-27: This app is currently not available on Google Play due to naming issues.
 <a href="https://play.google.com/store/apps/details?id=com.gerardngjr.mapboxdirections" target="_blank" rel="noopener"><img src="https://github.com/gerardng/mapboxDirections/blob/master/google-store-btn.png"/></a>
 
